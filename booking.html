@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂票系統 - 高鐵壽司列車</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🚄🍣 高鐵壽司列車</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首頁</a></li>
+                <li><a href="index.html#about">介紹</a></li>
+                <li><a href="index.html#video">故事廣告</a></li>
+                <li><a href="booking.html">訂票</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 訂票區塊 -->
+    <section class="booking-section">
+        <div class="container">
+            <h1>訂票系統</h1>
+            <p class="section-subtitle">選擇你的完美旅程</p>
+            
+            <div class="booking-form-wrapper">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="departure">出發城市</label>
+                        <select id="departure" name="departure" required>
+                            <option value="">-- 請選擇 --</option>
+                            <option value="tokyo">東京</option>
+                            <option value="osaka">大阪</option>
+                            <option value="kyoto">京都</option>
+                            <option value="hiroshima">廣島</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">目的地</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">-- 請選擇 --</option>
+                            <option value="tokyo">東京</option>
+                            <option value="osaka">大阪</option>
+                            <option value="kyoto">京都</option>
+                            <option value="hiroshima">廣島</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">出發日期</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passengers">乘客人數</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="1">1 人</option>
+                            <option value="2">2 人</option>
+                            <option value="3">3 人</option>
+                            <option value="4">4 人</option>
+                            <option value="5">5 人</option>
+                            <option value="6">6 人</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="seatClass">座位等級</label>
+                        <select id="seatClass" name="seatClass" required>
+                            <option value="">-- 請選擇 --</option>
+                            <option value="standard">標準座位 - ¥3,000</option>
+                            <option value="premium">高級座位 - ¥5,000</option>
+                            <option value="luxury">豪華套房 - ¥8,000</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mealPlan">套餐選擇</label>
+                        <select id="mealPlan" name="mealPlan" required>
+                            <option value="">-- 請選擇 --</option>
+                            <option value="basic">基礎套餐 - 20 件壽司</option>
+                            <option value="premium">高級套餐 - 40 件壽司</option>
+                            <option value="deluxe">豪華套餐 - 60 件壽司 + 特選餐點</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">電郵</label>
+                        <input type="email" id="email" name="email" placeholder="請輸入您的電郵" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">電話</label>
+                        <input type="tel" id="phone" name="phone" placeholder="請輸入您的電話號碼" required>
+                    </div>
+
+                    <div class="price-summary">
+                        <h3>價格摘要</h3>
+                        <div class="price-row">
+                            <span>座位價格：</span>
+                            <span id="seatPrice">¥0</span>
+                        </div>
+                        <div class="price-row">
+                            <span>乘客數量：</span>
+                            <span id="passengerCount">1</span>
+                        </div>
+                        <div class="price-row" style="border-top: 1px solid #ddd; padding-top: 10px;">
+                            <span style="font-weight: bold;">總價：</span>
+                            <span id="totalPrice" style="font-weight: bold; color: #e74c3c;">¥0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button">確認訂票</button>
+                </form>
+            </div>
+
+            <div class="booking-info">
+                <h3>訂票須知</h3>
+                <ul>
+                    <li>✓ 訂票後將收到確認電郵</li>
+                    <li>✓ 支持多種付款方式（信用卡、PayPal、銀行轉帳）</li>
+                    <li>✓ 出發前24小時可免費取消</li>
+                    <li>✓ 所有座位皆配備 WiFi 和娛樂設施</li>
+                    <li>✓ 兒童可享 50% 折扣</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 高鐵 × 迴轉壽司聯合列車。版權所有。</p>
+            <div class="footer-links">
+                <a href="#">隱私政策</a> | 
+                <a href="#">服務條款</a> | 
+                <a href="#">聯絡我們</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
