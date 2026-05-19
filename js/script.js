@@ -1,114 +1,117 @@
-// 價格配置
-const prices = {
-    standard: 3000,
-    premium: 5000,
-    luxury: 8000
-};
-
-// 當座位等級改變時更新價格
+// 頁面初始化
 document.addEventListener('DOMContentLoaded', function() {
-    const seatClassSelect = document.getElementById('seatClass');
-    const passengersSelect = document.getElementById('passengers');
-    
-    if (seatClassSelect) {
-        seatClassSelect.addEventListener('change', updatePrice);
-    }
-    
-    if (passengersSelect) {
-        passengersSelect.addEventListener('change', updatePrice);
-    }
-    
-    // 設定最小日期為今天
+    initializeBooking();
+    initializeMembers();
+    initializeContactForms();
+});
+
+// 訂票系統初始化
+function initializeBooking() {
+    const passengers = document.getElementById('passengers');
+    const bookingForm = document.getElementById('bookingForm');
     const dateInput = document.getElementById('date');
+
+    if (passengers) {
+        passengers.addEventListener('change', updateBookingPrice);
+    }
+
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.min = today;
     }
-    
-    // 訂票表單提交
-    const bookingForm = document.getElementById('bookingForm');
+
     if (bookingForm) {
         bookingForm.addEventListener('submit', handleBookingSubmit);
     }
-});
+}
 
-// 更新價格
-function updatePrice() {
-    const seatClass = document.getElementById('seatClass').value;
+// 更新訂票價格
+function updateBookingPrice() {
     const passengers = parseInt(document.getElementById('passengers').value) || 1;
-    
-    if (seatClass && prices[seatClass]) {
-        const price = prices[seatClass];
-        const totalPrice = price * passengers;
-        
-        document.getElementById('seatPrice').textContent = '¥' + price.toLocaleString('ja-JP');
-        document.getElementById('passengerCount').textContent = passengers;
-        document.getElementById('totalPrice').textContent = '¥' + totalPrice.toLocaleString('ja-JP');
-    } else {
-        document.getElementById('seatPrice').textContent = '¥0';
-        document.getElementById('totalPrice').textContent = '¥0';
+    const basePrice = 850;
+    let unitPrice = basePrice;
+    let discount = '無';
+
+    // 6人以上享優惠
+    if (passengers >= 6) {
+        unitPrice = 800;
+        discount = '6人以上：¥50/人';
     }
+
+    const totalPrice = unitPrice * passengers;
+
+    document.getElementById('basePrice').textContent = '¥' + basePrice;
+    document.getElementById('passengerCount').textContent = passengers + '人';
+    document.getElementById('discount').textContent = discount;
+    document.getElementById('totalPrice').textContent = '¥' + totalPrice.toLocaleString('zh-TW');
 }
 
 // 處理訂票提交
 function handleBookingSubmit(e) {
     e.preventDefault();
-    
-    // 收集表單數據
-    const formData = {
-        departure: document.getElementById('departure').value,
-        destination: document.getElementById('destination').value,
-        date: document.getElementById('date').value,
-        passengers: document.getElementById('passengers').value,
-        seatClass: document.getElementById('seatClass').value,
-        mealPlan: document.getElementById('mealPlan').value,
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        totalPrice: document.getElementById('totalPrice').textContent
-    };
-    
-    // 驗證出發地和目的地不同
-    if (formData.departure === formData.destination) {
-        alert('出發城市和目的地必須不同');
+
+    const departure = document.getElementById('departure').value;
+    const destination = document.getElementById('destination').value;
+    const date = document.getElementById('date').value;
+    const passengers = document.getElementById('passengers').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const totalPrice = document.getElementById('totalPrice').textContent;
+
+    // 驗證
+    if (departure === destination) {
+        alert('出發地和目的地不能相同');
         return;
     }
-    
-    // 模擬訂票確認
-    console.log('訂票信息:', formData);
-    
-    // 顯示成功消息
-    alert(`訂票成功！\n\n姓名: ${formData.name}\n路線: ${formData.departure} → ${formData.destination}\n日期: ${formData.date}\n乘客數: ${formData.passengers}\n總價: ${formData.totalPrice}\n\n確認信息已發送至 ${formData.email}`);
-    
+
+    // 成功訊息
+    alert(`訂票成功！\n\n姓名: ${name}\n出發地: ${departure}\n目的地: ${destination}\n日期: ${date}\n人數: ${passengers}\n總價: ${totalPrice}\n\n確認信已發送至 ${email}`);
+
     // 重置表單
     document.getElementById('bookingForm').reset();
-    document.getElementById('totalPrice').textContent = '¥0';
-    document.getElementById('seatPrice').textContent = '¥0';
+    updateBookingPrice();
+}
+
+// 會員表單初始化
+function initializeMembers() {
+    const membershipForm = document.getElementById('membershipForm');
+    
+    if (membershipForm) {
+        membershipForm.addEventListener('submit', handleMembershipSubmit);
+    }
+}
+
+// 處理會員表單
+function handleMembershipSubmit(e) {
+    e.preventDefault();
+    alert('感謝您的註冊！歡迎成為壹司列車免費會員。\n\n確認信已發送至您的電子郵件，請查收。');
+    e.target.reset();
+}
+
+// 聯絡表單初始化
+function initializeContactForms() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactSubmit);
+    }
+}
+
+// 處理聯絡表單
+function handleContactSubmit(e) {
+    e.preventDefault();
+    alert('感謝您的來信！\n\n我們已收到您的訊息，將在24小時內為您回覆。');
+    e.target.reset();
 }
 
 // 平滑滾動
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// 導航連結的平滑滾動
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
-        if (href.includes('#')) {
+        if (href.includes('#') && href.length > 1) {
             e.preventDefault();
-            const targetId = href.split('#')[1];
-            const target = document.getElementById(targetId);
+            const target = document.querySelector(href);
             if (target) {
                 target.scrollIntoView({
                     behavior: 'smooth',

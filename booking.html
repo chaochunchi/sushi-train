@@ -3,118 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>訂票系統 - 高鐵壽司列車</title>
+    <title>訂票 - 壹司列車</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- 導航列 -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">🚄🍣 高鐵壽司列車</div>
+            <div class="logo-section">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="30" width="35" height="35" rx="8" fill="#E74C3C" opacity="0.9"/>
+                    <circle cx="18" cy="42" r="4" fill="#FFF"/>
+                    <circle cx="28" cy="42" r="4" fill="#FFF"/>
+                    <circle cx="38" cy="42" r="4" fill="#FFF"/>
+                    <polygon points="45,48 50,40 55,48" fill="#FFF"/>
+                    <ellipse cx="70" cy="45" rx="18" ry="15" fill="#F5E6D3"/>
+                    <circle cx="65" cy="42" r="5" fill="#2ECC71"/>
+                    <circle cx="75" cy="42" r="5" fill="#E74C3C"/>
+                    <path d="M 60 55 Q 70 58 80 55" stroke="#E74C3C" stroke-width="2" fill="none"/>
+                </svg>
+                <span class="brand-name">壹司列車</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html#home">首頁</a></li>
-                <li><a href="index.html#about">介紹</a></li>
-                <li><a href="index.html#video">故事廣告</a></li>
+                <li><a href="about.html">介紹</a></li>
+                <li><a href="menu.html">菜單</a></li>
                 <li><a href="booking.html">訂票</a></li>
+                <li><a href="reviews.html">評價</a></li>
+                <li><a href="membership.html">免費會員</a></li>
+                <li><a href="contact.html">聯絡</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- 訂票區塊 -->
+    <!-- 訂票表單 -->
     <section class="booking-section">
         <div class="container">
-            <h1>訂票系統</h1>
+            <h1>🎫 訂票</h1>
             <p class="section-subtitle">選擇你的完美旅程</p>
-            
-            <div class="booking-form-wrapper">
+
+            <div class="booking-wrapper">
                 <form id="bookingForm" class="booking-form">
                     <div class="form-group">
-                        <label for="departure">出發城市</label>
-                        <select id="departure" name="departure" required>
+                        <label>出發地 <span class="required">*</span></label>
+                        <select id="departure" required>
                             <option value="">-- 請選擇 --</option>
-                            <option value="tokyo">東京</option>
-                            <option value="osaka">大阪</option>
-                            <option value="kyoto">京都</option>
-                            <option value="hiroshima">廣島</option>
+                            <option value="taipei">台北站</option>
+                            <option value="hsinchu">新竹站</option>
+                            <option value="miaoli">苗栗站</option>
+                            <option value="taichung">台中站</option>
+                            <option value="changhua">彰化站</option>
+                            <option value="yunlin">雲林站</option>
+                            <option value="chiayi">嘉義站</option>
+                            <option value="tainan">台南站</option>
+                            <option value="kaohsiung">高雄站</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="destination">目的地</label>
-                        <select id="destination" name="destination" required>
+                        <label>目的地 <span class="required">*</span></label>
+                        <select id="destination" required>
                             <option value="">-- 請選擇 --</option>
-                            <option value="tokyo">東京</option>
-                            <option value="osaka">大阪</option>
-                            <option value="kyoto">京都</option>
-                            <option value="hiroshima">廣島</option>
+                            <option value="taipei">台北站</option>
+                            <option value="hsinchu">新竹站</option>
+                            <option value="miaoli">苗栗站</option>
+                            <option value="taichung">台中站</option>
+                            <option value="changhua">彰化站</option>
+                            <option value="yunlin">雲林站</option>
+                            <option value="chiayi">嘉義站</option>
+                            <option value="tainan">台南站</option>
+                            <option value="kaohsiung">高雄站</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="date">出發日期</label>
-                        <input type="date" id="date" name="date" required>
+                        <label>日期 <span class="required">*</span></label>
+                        <input type="date" id="date" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="passengers">乘客人數</label>
-                        <select id="passengers" name="passengers" required>
-                            <option value="1">1 人</option>
-                            <option value="2">2 人</option>
-                            <option value="3">3 人</option>
-                            <option value="4">4 人</option>
-                            <option value="5">5 人</option>
-                            <option value="6">6 人</option>
+                        <label>人數 <span class="required">*</span></label>
+                        <select id="passengers" required>
+                            <option value="1">1人</option>
+                            <option value="2">2人</option>
+                            <option value="3">3人</option>
+                            <option value="4">4人</option>
+                            <option value="5">5人</option>
+                            <option value="6">6人（享優惠）</option>
+                            <option value="7">7人（享優惠）</option>
+                            <option value="8">8人（享優惠）</option>
+                            <option value="9">9人（享優惠）</option>
+                            <option value="10">10人（享優惠）</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="seatClass">座位等級</label>
-                        <select id="seatClass" name="seatClass" required>
-                            <option value="">-- 請選擇 --</option>
-                            <option value="standard">標準座位 - ¥3,000</option>
-                            <option value="premium">高級座位 - ¥5,000</option>
-                            <option value="luxury">豪華套房 - ¥8,000</option>
-                        </select>
+                        <label>姓名 <span class="required">*</span></label>
+                        <input type="text" id="name" placeholder="請輸入姓名" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="mealPlan">套餐選擇</label>
-                        <select id="mealPlan" name="mealPlan" required>
-                            <option value="">-- 請選擇 --</option>
-                            <option value="basic">基礎套餐 - 20 件壽司</option>
-                            <option value="premium">高級套餐 - 40 件壽司</option>
-                            <option value="deluxe">豪華套餐 - 60 件壽司 + 特選餐點</option>
-                        </select>
+                        <label>電子郵件 <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="請輸入電子郵件" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" placeholder="請輸入您的姓名" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">電郵</label>
-                        <input type="email" id="email" name="email" placeholder="請輸入您的電郵" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">電話</label>
-                        <input type="tel" id="phone" name="phone" placeholder="請輸入您的電話號碼" required>
+                        <label>電話 <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="請輸入電話號碼" required>
                     </div>
 
                     <div class="price-summary">
-                        <h3>價格摘要</h3>
+                        <h3>價格總結</h3>
                         <div class="price-row">
-                            <span>座位價格：</span>
-                            <span id="seatPrice">¥0</span>
+                            <span>基礎票價：</span>
+                            <span id="basePrice">¥850</span>
                         </div>
                         <div class="price-row">
-                            <span>乘客數量：</span>
+                            <span>人數：</span>
                             <span id="passengerCount">1</span>
                         </div>
-                        <div class="price-row" style="border-top: 1px solid #ddd; padding-top: 10px;">
-                            <span style="font-weight: bold;">總價：</span>
-                            <span id="totalPrice" style="font-weight: bold; color: #e74c3c;">¥0</span>
+                        <div class="price-row">
+                            <span>優惠：</span>
+                            <span id="discount">無</span>
+                        </div>
+                        <div class="price-row total">
+                            <span>總價：</span>
+                            <span id="totalPrice">¥850</span>
                         </div>
                     </div>
 
@@ -123,13 +137,14 @@
             </div>
 
             <div class="booking-info">
-                <h3>訂票須知</h3>
+                <h3>💡 訂票須知</h3>
                 <ul>
-                    <li>✓ 訂票後將收到確認電郵</li>
-                    <li>✓ 支持多種付款方式（信用卡、PayPal、銀行轉帳）</li>
+                    <li>✓ 基礎票價 ¥850/人（高於一般高鐵票價）</li>
+                    <li>✓ 6人以上享優惠：¥800/人</li>
+                    <li>✓ 不定時有打折優惠活動</li>
                     <li>✓ 出發前24小時可免費取消</li>
-                    <li>✓ 所有座位皆配備 WiFi 和娛樂設施</li>
-                    <li>✓ 兒童可享 50% 折扣</li>
+                    <li>✓ 支持線上付款和現場現金付款</li>
+                    <li>✓ 免費會員可累積點數換優惠</li>
                 </ul>
             </div>
         </div>
@@ -138,11 +153,11 @@
     <!-- 頁尾 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 高鐵 × 迴轉壽司聯合列車。版權所有。</p>
+            <p>&copy; 2026 壹司列車。版權所有。</p>
             <div class="footer-links">
                 <a href="#">隱私政策</a> | 
                 <a href="#">服務條款</a> | 
-                <a href="#">聯絡我們</a>
+                <a href="contact.html">聯絡我們</a>
             </div>
         </div>
     </footer>

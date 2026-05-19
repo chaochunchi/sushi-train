@@ -1,14 +1,31 @@
+/* 變數定義 */
+:root {
+    --primary-red: #E74C3C;
+    --dark-red: #C0392B;
+    --golden: #F4A460;
+    --cream: #F5E6D3;
+    --dark-text: #2C3E50;
+    --light-text: #7F8C8D;
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* 全局樣式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'Microsoft JhengHei', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--dark-text);
+    background-color: #FAFAFA;
 }
 
 .container {
@@ -19,13 +36,13 @@ body {
 
 /* 導航列 */
 .navbar {
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -34,9 +51,20 @@ body {
     align-items: center;
 }
 
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
+    width: 50px;
+    height: 50px;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
     letter-spacing: 1px;
 }
 
@@ -49,158 +77,77 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s;
     font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
 .nav-links a:hover {
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
-/* 首頁區塊 */
+/* 英雄區塊 */
 .hero {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 100px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '🚄';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    font-size: 300px;
-    opacity: 0.1;
-}
-
-.hero::after {
-    content: '🍣';
-    position: absolute;
-    bottom: -50px;
-    left: -50px;
-    font-size: 300px;
-    opacity: 0.1;
+    background: linear-gradient(135deg, #ECF0F1 0%, #BDC3C7 100%);
+    min-height: 500px;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    flex: 1;
+    max-width: 500px;
 }
 
 .hero h1 {
     font-size: 3rem;
+    color: var(--primary-red);
     margin-bottom: 1rem;
-    animation: slideDown 0.8s ease-out;
+    line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-}
-
-.hero .subtitle {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    font-size: 1.2rem;
+    color: var(--light-text);
     margin-bottom: 2rem;
 }
 
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image svg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
 .cta-button {
-    background: #e74c3c;
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: white;
     padding: 15px 40px;
     border: none;
     border-radius: 50px;
     font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
 }
 
 .cta-button:hover {
-    background: #c0392b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
 }
 
-/* 介紹區塊 */
-.about {
-    padding: 80px 20px;
-    background: white;
-}
-
-.about h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: #2c3e50;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.about-card {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s;
-    border: 2px solid transparent;
-}
-
-.about-card:hover {
-    transform: translateY(-5px);
-    border-color: #e74c3c;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.about-card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.about-card p {
-    color: #7f8c8d;
-    line-height: 1.8;
-}
-
-.about-details {
-    background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
-    padding: 3rem;
-    border-radius: 10px;
-}
-
-.about-details h3 {
-    color: #2c3e50;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.features-list {
-    list-style: none;
-    columns: 2;
-    gap: 2rem;
-}
-
-.features-list li {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #2c3e50;
-    font-weight: 500;
-}
-
-/* 故事廣告影片區塊 */
+/* 影片區塊 */
 .video-section {
     padding: 80px 20px;
     background: white;
@@ -209,199 +156,375 @@ body {
 .video-section h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #2c3e50;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #7f8c8d;
+    color: var(--primary-red);
     margin-bottom: 3rem;
-    font-size: 1.1rem;
 }
 
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.video-card {
-    background: #f8f9fa;
-    border-radius: 10px;
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    transition: all 0.3s;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.video-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.video-placeholder {
+.video-container iframe {
+    display: block;
     width: 100%;
-    height: 300px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
+    aspect-ratio: 16 / 9;
 }
 
-.video-card h3 {
-    padding: 1.5rem 1.5rem 0.5rem;
-    color: #2c3e50;
-}
-
-.video-card p {
-    padding: 0 1.5rem 1.5rem;
-    color: #7f8c8d;
+.video-note {
+    text-align: center;
+    color: var(--light-text);
+    margin-top: 2rem;
     font-size: 0.95rem;
 }
 
-/* 特色區塊 */
+/* 特色亮點 */
 .highlights {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-    color: white;
+    background: white;
 }
 
-.highlights h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.highlights-grid {
+.highlights .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-.highlight {
+.highlight-card {
+    background: linear-gradient(135deg, #F8F9FA 0%, #ECF0F1 100%);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
     text-align: center;
-    padding: 2rem;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    border: 2px solid transparent;
 }
 
-.highlight-number {
-    display: block;
+.highlight-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-red);
+    box-shadow: 0 8px 24px rgba(231, 76, 60, 0.15);
+}
+
+.highlight-icon {
     font-size: 2.5rem;
-    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.highlight-card p {
+    color: var(--light-text);
+    line-height: 1.8;
+}
+
+/* 頁尾 */
+.footer {
+    background: linear-gradient(135deg, var(--dark-text) 0%, #1A252F 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 20px;
+    margin-top: 4rem;
+}
+
+.footer-links {
+    margin-top: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--golden);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-red);
+}
+
+/* 關於頁面 */
+.about-section {
+    padding: 60px 20px;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-text h2 {
+    color: var(--primary-red);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-text p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.feature-list li {
+    padding: 0.8rem 0;
+    color: var(--light-text);
+    border-bottom: 1px solid #ECF0F1;
+    font-weight: 500;
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.method {
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.method h3 {
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+}
+
+.method p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+/* 菜單頁面 */
+.menu-section {
+    padding: 60px 20px;
+}
+
+.menu-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
     margin-bottom: 0.5rem;
 }
 
-.highlight p {
+.season-note {
+    text-align: center;
+    color: var(--golden);
+    font-weight: 600;
+    margin-bottom: 3rem;
     font-size: 1.1rem;
 }
 
-/* 訂票區塊 */
-.booking-section {
-    padding: 80px 20px;
+.menu-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-category {
+    margin-bottom: 3rem;
     background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.menu-category h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--golden);
+    padding-bottom: 1rem;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #F8F9FA;
+    border-radius: 10px;
+    transition: var(--transition);
+    border-left: 4px solid var(--golden);
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.item-info h3 {
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.item-info p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.item-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-red);
+}
+
+/* 訂票頁面 */
+.booking-section {
+    padding: 60px 20px;
 }
 
 .booking-section h1 {
     text-align: center;
     font-size: 2.5rem;
+    color: var(--primary-red);
     margin-bottom: 0.5rem;
-    color: #2c3e50;
 }
 
-.booking-form-wrapper {
+.section-subtitle {
+    text-align: center;
+    color: var(--light-text);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.booking-wrapper {
     max-width: 600px;
-    margin: 3rem auto;
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 0 auto 3rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .booking-form {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: var(--primary-red);
 }
 
 .form-group input,
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #ECF0F1;
+    border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    font-family: inherit;
+    transition: var(--transition);
 }
 
 .form-group input:focus,
-.form-group select:focus {
+.form-group select:focus,
+.form-group textarea:focus {
     outline: none;
-    border-color: #e74c3c;
-    box-shadow: 0 0 5px rgba(231, 76, 60, 0.2);
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
 }
 
 .price-summary {
-    background: white;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 100%);
     padding: 1.5rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-    border-left: 4px solid #e74c3c;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
 }
 
 .price-summary h3 {
+    color: var(--primary-red);
     margin-bottom: 1rem;
-    color: #2c3e50;
 }
 
 .price-row {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
-    color: #7f8c8d;
+    margin-bottom: 0.8rem;
+    color: var(--light-text);
+}
+
+.price-row.total {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    padding-top: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-red);
 }
 
 .submit-button {
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
 .submit-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
 }
 
 .booking-info {
     max-width: 600px;
-    margin: 3rem auto;
-    background: #ecf0f1;
-    padding: 2rem;
-    border-radius: 10px;
+    margin: 0 auto;
+    background: #F8F9FA;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--golden);
 }
 
 .booking-info h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
+    color: var(--primary-red);
+    margin-bottom: 1.5rem;
 }
 
 .booking-info ul {
@@ -409,74 +532,339 @@ body {
 }
 
 .booking-info li {
-    margin-bottom: 0.8rem;
-    color: #7f8c8d;
+    margin-bottom: 1rem;
+    color: var(--light-text);
     font-weight: 500;
 }
 
-/* 頁尾 */
-.footer {
-    background: #2c3e50;
-    color: white;
+/* 評價頁面 */
+.reviews-section {
+    padding: 60px 20px;
+}
+
+.reviews-section h1 {
     text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.reviews-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background: white;
     padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+    border-top: 4px solid var(--golden);
 }
 
-.footer-links {
-    margin-top: 1rem;
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.footer-links a {
-    color: #3498db;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    transition: color 0.3s;
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
-.footer-links a:hover {
-    color: #2980b9;
+.reviewer-info h3 {
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
 }
 
-/* 動畫 */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.reviewer-info p {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: var(--golden);
+    font-size: 1rem;
+}
+
+.review-text {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.review-date {
+    color: #BDC3C7;
+    font-size: 0.85rem;
+}
+
+/* 會員頁面 */
+.membership-section {
+    padding: 60px 20px;
+}
+
+.membership-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.membership-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.membership-benefits {
+    margin-bottom: 4rem;
+}
+
+.membership-benefits h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.membership-tiers {
+    margin-bottom: 4rem;
+}
+
+.membership-tiers h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tier-card {
+    background: linear-gradient(135deg, #F8F9FA 0%, #ECF0F1 100%);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tier-card:hover {
+    border-color: var(--primary-red);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(231, 76, 60, 0.15);
+}
+
+.tier-card h3 {
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.tier-desc {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+.tier-perks {
+    list-style: none;
+    text-align: left;
+}
+
+.tier-perks li {
+    padding: 0.5rem 0;
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.membership-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.membership-form h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 聯絡頁面 */
+.contact-section {
+    padding: 60px 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 0.5rem;
+}
+
+.contact-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-info h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--golden);
+}
+
+.info-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    color: var(--light-text);
+}
+
+.info-note {
+    font-size: 0.9rem;
+    color: #BDC3C7;
+}
+
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
+    .nav-links {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
-    
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .logo-section {
+        flex-direction: column;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
     .hero p {
         font-size: 1rem;
     }
-    
-    .nav-links {
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-    
-    .about h2,
-    .video-section h2,
-    .highlights h2,
-    .booking-section h1 {
-        font-size: 2rem;
-    }
-    
-    .features-list {
-        columns: 1;
-    }
-    
-    .hero::before,
-    .hero::after {
-        font-size: 150px;
+
+    .highlights .container,
+    .reviews-container,
+    .menu-items,
+    .benefits-grid,
+    .tiers-grid {
+        grid-template-columns: 1fr;
     }
 }
