@@ -156,31 +156,29 @@ body {
 ========================= */
 .hero {
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 100px 20px;
-
-    /* Hero 背景照片 */
-    .hero {
-    .hero {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: white;
     padding: 140px 20px;
+
+    /* 黑色背景 */
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+
+    color: white;
     text-align: center;
 }
+
+/* 黑色遮罩（如果你要更暗可以調） */
 .hero::before {
     content: "";
     position: absolute;
     inset: 0;
-
-    background: rgba(0,0,0,0.45);
-
+    background: rgba(0,0,0,0.35);
     z-index: 0;
 }
 
+/* 內容置上層 */
 .hero-content,
 .hero-image {
     position: relative;
