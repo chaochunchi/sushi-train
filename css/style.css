@@ -36,19 +36,30 @@ body {
 
 /* 導航列 */
 .navbar {
-    background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-red) 100%);
+    position: relative;
+    background-image: url("../images/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* 黑色遮罩（讓文字看得清楚） */
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 0;
+}
+
+/* 讓內容浮在圖片上面 */
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .logo-section {
