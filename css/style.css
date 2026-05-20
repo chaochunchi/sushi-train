@@ -36,24 +36,10 @@ body {
 
 /* 導航列 */
 .navbar {
-    position: relative;
     background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-}
-
-/* 黑色遮罩（讓文字看得清楚） */
-.navbar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.45);
-    z-index: 0;
 }
 
 /* 讓內容浮在圖片上面 */
