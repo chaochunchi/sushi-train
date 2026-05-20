@@ -868,3 +868,24 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.video-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.video-container iframe {
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+.video-note {
+    margin-top: 15px;
+    color: #666;
+    font-size: 18px;
+}
