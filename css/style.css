@@ -120,16 +120,12 @@ body {
     padding: 100px 20px;
 
     /* Hero 背景照片 */
-    background-image: url("../images/hero.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    min-height: 500px;
-
-    overflow: hidden;
+    .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 140px 20px;
+    text-align: center;
 }
-
 .hero::before {
     content: "";
     position: absolute;
