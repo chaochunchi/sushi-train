@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Sushi Express - 高鐵 × 迴轉壽司智慧餐飲系統</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 背景粒子效果 -->
+    <div class="particles-container" id="particlesContainer"></div>
+    
+    <!-- 背景光暈 -->
+    <div class="background-glow"></div>
+
+    <!-- 主容器 -->
+    <div class="presentation-container">
+        <!-- 所有幻燈片 -->
+        <div class="slides-wrapper">
+            
+            <!-- 第1頁: 標題頁 -->
+            <section class="slide" data-slide="1">
+                <div class="slide-background">
+                    <div class="hero-visual">
+                        <div class="train-visual"></div>
+                        <div class="rail-animation"></div>
+                    </div>
+                </div>
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h1 class="title-hero">Rail Sushi Express</h1>
+                        <p class="subtitle-hero">高鐵 × 迴轉壽司智慧餐飲系統</p>
+                        <div class="hero-divider"></div>
+                        <p class="tagline">讓每份餐點像高鐵一樣準時抵達</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第2頁: 業界挑戰 -->
+            <section class="slide" data-slide="2">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <div class="section-label">The Industry Challenge</div>
+                        <h2>餐飲業正面臨三大挑戰</h2>
+                        
+                        <div class="challenges-grid">
+                            <div class="challenge-card">
+                                <div class="challenge-icon">👥</div>
+                                <h3>人力短缺</h3>
+                                <p>服務人員嚴重不足</p>
+                            </div>
+                            <div class="challenge-card">
+                                <div class="challenge-icon">⏱️</div>
+                                <h3>等待時間長</h3>
+                                <p>尖峰期效率低下</p>
+                            </div>
+                            <div class="challenge-card">
+                                <div class="challenge-icon">✨</div>
+                                <h3>體驗缺乏創新</h3>
+                                <p>難以留住顧客</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第3頁: 問題定義 -->
+            <section class="slide" data-slide="3">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>問題是什麼？</h2>
+                        <div class="problem-statement">
+                            <p>消費者希望：</p>
+                            <ul class="problem-list">
+                                <li><span class="highlight">更快</span>取得餐點</li>
+                                <li><span class="highlight">更少</span>等待</li>
+                                <li><span class="highlight">更好</span>的體驗</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第4頁: 價值主張 -->
+            <section class="slide" data-slide="4">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>為什麼值得解決？</h2>
+                        <div class="metrics-showcase">
+                            <div class="metric-box">
+                                <div class="metric-label">等待時間越長</div>
+                                <div class="metric-arrow">↓</div>
+                                <div class="metric-value red">滿意度越低</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-label">滿意度越低</div>
+                                <div class="metric-arrow">��</div>
+                                <div class="metric-value red">回訪率越低</div>
+                            </div>
+                            <div class="metric-box">
+                                <div class="metric-label">回訪率越低</div>
+                                <div class="metric-arrow">↓</div>
+                                <div class="metric-value red">營收下降</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第5頁: 商業機會 -->
+            <section class="slide" data-slide="5">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>商業機會</h2>
+                        <div class="opportunities">
+                            <div class="opp-item">
+                                <div class="opp-number">1</div>
+                                <h3>降低人力成本</h3>
+                            </div>
+                            <div class="opp-item">
+                                <div class="opp-number">2</div>
+                                <h3>提升翻桌率</h3>
+                            </div>
+                            <div class="opp-item">
+                                <div class="opp-number">3</div>
+                                <h3>提高營收</h3>
+                            </div>
+                            <div class="opp-item">
+                                <div class="opp-number">4</div>
+                                <h3>創造品牌特色</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第6頁: 清晰的問題陳述 -->
+            <section class="slide" data-slide="6">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <div class="section-label">Clear Problem Statement</div>
+                        <h2>如何讓餐點更快速、更精準、更有趣地送達顧客桌邊？</h2>
+                        <div class="statement-visual">
+                            <div class="statement-element">快速</div>
+                            <div class="statement-element">精準</div>
+                            <div class="statement-element">有趣</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第7頁: 目標客群 -->
+            <section class="slide" data-slide="7">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>目標客群</h2>
+                        <div class="audience-grid">
+                            <div class="audience-item">
+                                <div class="audience-icon">👨‍💼</div>
+                                <h3>18-40���</h3>
+                                <p>上班族與年輕消費者</p>
+                            </div>
+                            <div class="audience-item">
+                                <div class="audience-icon">👨‍👩‍👧</div>
+                                <h3>家庭客群</h3>
+                                <p>尋求便利與樂趣</p>
+                            </div>
+                            <div class="audience-item">
+                                <div class="audience-icon">🌍</div>
+                                <h3>觀光旅客</h3>
+                                <p>體驗特色餐飲</p>
+                            </div>
+                            <div class="audience-item">
+                                <div class="audience-icon">🤖</div>
+                                <h3>科技愛好者</h3>
+                                <p>追求創新體驗</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第8頁: 使用者痛點 -->
+            <section class="slide" data-slide="8">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>使用者痛點</h2>
+                        <div class="pain-points">
+                            <div class="pain-item">
+                                <div class="pain-icon">⏳</div>
+                                <h3>等待過久</h3>
+                            </div>
+                            <div class="pain-item">
+                                <div class="pain-icon">❌</div>
+                                <h3>送錯餐</h3>
+                            </div>
+                            <div class="pain-item">
+                                <div class="pain-icon">😫</div>
+                                <h3>尖峰服務不足</h3>
+                            </div>
+                            <div class="pain-item">
+                                <div class="pain-icon">😐</div>
+                                <h3>缺乏互動</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第9頁: 需求驗證 -->
+            <section class="slide" data-slide="9">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>需求驗證</h2>
+                        <div class="verification-methods">
+                            <div class="method">
+                                <div class="method-step">01</div>
+                                <h3>問卷調查</h3>
+                            </div>
+                            <div class="method">
+                                <div class="method-step">02</div>
+                                <h3>使用者訪談</h3>
+                            </div>
+                            <div class="method">
+                                <div class="method-step">03</div>
+                                <h3>現場觀察</h3>
+                            </div>
+                            <div class="method">
+                                <div class="method-step">04</div>
+                                <h3>數據分析</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第10頁: 產品介紹 -->
+            <section class="slide" data-slide="10">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <div class="section-label">Product Introduction</div>
+                        <h2>打造下一代智慧餐飲體驗</h2>
+                        <p class="intro-subtitle">融合高鐵的準時系統與迴轉壽司的創意</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第11頁: 產品願景 -->
+            <section class="slide" data-slide="11">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>產品願景</h2>
+                        <div class="vision-box">
+                            <p class="vision-text">讓每份餐點</p>
+                            <p class="vision-text highlight">像高鐵一樣準時抵達</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第12頁: 核心亮點 -->
+            <section class="slide" data-slide="12">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>核心亮點</h2>
+                        <div class="highlights-grid">
+                            <div class="highlight-card">
+                                <div class="highlight-number">01</div>
+                                <h3>高速送餐</h3>
+                                <p>自動軌道系統</p>
+                            </div>
+                            <div class="highlight-card">
+                                <div class="highlight-number">02</div>
+                                <h3>智慧軌道</h3>
+                                <p>精準定位配送</p>
+                            </div>
+                            <div class="highlight-card">
+                                <div class="highlight-number">03</div>
+                                <h3>即時追蹤</h3>
+                                <p>掌握餐點動向</p>
+                            </div>
+                            <div class="highlight-card">
+                                <div class="highlight-number">04</div>
+                                <h3>沉浸式體驗</h3>
+                                <p>互動餐飲旅程</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第13頁: MVP -->
+            <section class="slide" data-slide="13">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>MVP</h2>
+                        <div class="mvp-content">
+                            <p>建立迷你高鐵送餐系統</p>
+                            <div class="mvp-flow">
+                                <div class="flow-box">廚房</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-box">智慧軌道</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-box">顧客</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第14頁: 功能一 -->
+            <section class="slide" data-slide="14">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>智慧列車送餐</h2>
+                        <div class="feature-showcase">
+                            <div class="feature-title">解決等待問題</div>
+                            <ul class="feature-list">
+                                <li>自動出餐系統</li>
+                                <li>精準配送追蹤</li>
+                                <li>即時通知客戶</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第15頁: 功能二 -->
+            <section class="slide" data-slide="15">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>即時追蹤系統</h2>
+                        <div class="feature-showcase">
+                            <div class="feature-title">掌握餐點位置</div>
+                            <ul class="feature-list">
+                                <li>實時定位餐點</li>
+                                <li>倒數送達時間</li>
+                                <li>提升用餐體驗</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第16頁: 功能三 -->
+            <section class="slide" data-slide="16">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>智慧推薦系統</h2>
+                        <div class="feature-showcase">
+                            <div class="feature-title">提高客單價</div>
+                            <ul class="feature-list">
+                                <li>個性化推薦</li>
+                                <li>組合優化方案</li>
+                                <li>提升銷售機會</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第17頁: 差異化分析 -->
+            <section class="slide" data-slide="17">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>差異化分析</h2>
+                        <div class="comparison-table">
+                            <div class="comp-row header">
+                                <div class="comp-cell">傳統餐廳</div>
+                                <div class="comp-cell">迴轉壽司</div>
+                                <div class="comp-cell highlight-cell">Rail Sushi Express</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-cell">人力依賴</div>
+                                <div class="comp-cell">部分自動</div>
+                                <div class="comp-cell highlight-cell">⭐ 全自動智慧</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-cell">等待冗長</div>
+                                <div class="comp-cell">中等速度</div>
+                                <div class="comp-cell highlight-cell">⭐ 高速精準</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-cell">單調體驗</div>
+                                <div class="comp-cell">有趣互動</div>
+                                <div class="comp-cell highlight-cell">⭐ 沉浸科技感</div>
+                            </div>
+                            <div class="comp-row">
+                                <div class="comp-cell">標準服務</div>
+                                <div class="comp-cell">基礎推薦</div>
+                                <div class="comp-cell highlight-cell">⭐ AI智慧推薦</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第18頁: 成功指標與結尾 -->
+            <section class="slide" data-slide="18">
+                <div class="slide-content">
+                    <div class="content-inner">
+                        <h2>Success Metrics</h2>
+                        <div class="success-metrics">
+                            <div class="metric-item">
+                                <div class="metric-icon">⚡</div>
+                                <h3>送餐時間</h3>
+                                <p>縮短 <span class="highlight">30%</span></p>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon">😊</div>
+                                <h3>客戶滿意度</h3>
+                                <p>超過 <span class="highlight">90%</span></p>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon">🔄</div>
+                                <h3>回訪率</h3>
+                                <p>提升 <span class="highlight">20%</span></p>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon">💰</div>
+                                <h3>成本</h3>
+                                <p>下降 <span class="highlight">15%</span></p>
+                            </div>
+                        </div>
+                        <div class="closing-section">
+                            <h3 class="closing-title">Thank You</h3>
+                            <p class="closing-subtitle">讓送餐不只是送餐<br>而是一場高鐵級的美食旅程</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- 頁碼指示器 -->
+        <div class="slide-counter">
+            <span class="counter-current">01</span>
+            <span class="counter-separator">/</span>
+            <span class="counter-total">18</span>
+        </div>
+
+        <!-- 進度條 -->
+        <div class="progress-bar"></div>
+
+        <!-- 控制提示 -->
+        <div class="controls-hint">
+            <span>← →</span>
+        </div>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- 主程�� -->
+    <script src="script.js"></script>
+</body>
+</html>
