@@ -25,7 +25,24 @@
             <section class="slide" data-slide="1">
                 <div class="slide-background">
                     <div class="hero-visual">
-                        <div class="train-visual"></div>
+                        <svg class="train-visual" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 高鐵列車 -->
+                            <g>
+                                <!-- 車頭 -->
+                                <path d="M 20 80 Q 50 40 80 60 L 80 100 Q 50 110 20 100 Z" fill="#1f5aa6" opacity="0.8"/>
+                                <!-- 車廂 -->
+                                <rect x="80" y="50" width="280" height="60" fill="#ffffff" stroke="#1f5aa6" stroke-width="2"/>
+                                <!-- 車輪 -->
+                                <circle cx="120" cy="115" r="12" fill="#1f5aa6"/>
+                                <circle cx="200" cy="115" r="12" fill="#1f5aa6"/>
+                                <circle cx="280" cy="115" r="12" fill="#1f5aa6"/>
+                                <!-- 窗戶 -->
+                                <rect x="100" y="65" width="30" height="20" fill="#1f5aa6" opacity="0.3"/>
+                                <rect x="150" y="65" width="30" height="20" fill="#1f5aa6" opacity="0.3"/>
+                                <rect x="200" y="65" width="30" height="20" fill="#1f5aa6" opacity="0.3"/>
+                                <rect x="250" y="65" width="30" height="20" fill="#1f5aa6" opacity="0.3"/>
+                            </g>
+                        </svg>
                         <div class="rail-animation"></div>
                     </div>
                 </div>
@@ -48,17 +65,40 @@
                         
                         <div class="challenges-grid">
                             <div class="challenge-card">
-                                <div class="challenge-icon">👥</div>
+                                <div class="challenge-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <circle cx="50" cy="30" r="15" fill="#1f5aa6" opacity="0.8"/>
+                                            <path d="M 35 50 Q 30 65 40 75 L 60 75 Q 70 65 65 50 Z" fill="#1f5aa6" opacity="0.8"/>
+                                            <rect x="32" y="50" width="8" height="25" fill="#1f5aa6" opacity="0.8"/>
+                                            <rect x="60" y="50" width="8" height="25" fill="#1f5aa6" opacity="0.8"/>
+                                        </g>
+                                    </svg>
+                                </div>
                                 <h3>人力短缺</h3>
                                 <p>服務人員嚴重不足</p>
                             </div>
                             <div class="challenge-card">
-                                <div class="challenge-icon">⏱️</div>
+                                <div class="challenge-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <circle cx="50" cy="50" r="40" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.8"/>
+                                            <path d="M 50 15 L 50 50" stroke="#1f5aa6" stroke-width="3" opacity="0.8"/>
+                                            <path d="M 50 50 L 80 50" stroke="#1f5aa6" stroke-width="3" opacity="0.8"/>
+                                        </g>
+                                    </svg>
+                                </div>
                                 <h3>等待時間長</h3>
                                 <p>尖峰期效率低下</p>
                             </div>
                             <div class="challenge-card">
-                                <div class="challenge-icon">✨</div>
+                                <div class="challenge-icon">
+                                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path d="M 50 15 L 65 45 L 85 45 L 70 60 L 80 90 L 50 70 L 20 90 L 30 60 L 15 45 L 35 45 Z" fill="#1f5aa6" opacity="0.8"/>
+                                        </g>
+                                    </svg>
+                                </div>
                                 <h3>體驗缺乏創新</h3>
                                 <p>難以留住顧客</p>
                             </div>
@@ -80,6 +120,20 @@
                                 <li><span class="highlight">更好</span>的體驗</li>
                             </ul>
                         </div>
+                        <div class="problem-visual">
+                            <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#1f5aa6;stop-opacity:0.2" />
+                                        <stop offset="100%" style="stop-color:#1f5aa6;stop-opacity:0.8" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- 速度線 -->
+                                <line x1="20" y1="75" x2="80" y2="75" stroke="url(#grad1)" stroke-width="3"/>
+                                <line x1="100" y1="75" x2="160" y2="75" stroke="url(#grad1)" stroke-width="3"/>
+                                <line x1="180" y1="75" x2="280" y2="75" stroke="url(#grad1)" stroke-width="3"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -97,7 +151,7 @@
                             </div>
                             <div class="metric-box">
                                 <div class="metric-label">滿意度越低</div>
-                                <div class="metric-arrow">��</div>
+                                <div class="metric-arrow">↓</div>
                                 <div class="metric-value red">回訪率越低</div>
                             </div>
                             <div class="metric-box">
@@ -118,18 +172,31 @@
                         <div class="opportunities">
                             <div class="opp-item">
                                 <div class="opp-number">1</div>
+                                <svg class="opp-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="40" r="20" fill="#1f5aa6" opacity="0.3"/>
+                                    <path d="M 50 60 L 30 80 L 70 80 Z" fill="#1f5aa6" opacity="0.3"/>
+                                </svg>
                                 <h3>降低人力成本</h3>
                             </div>
                             <div class="opp-item">
                                 <div class="opp-number">2</div>
+                                <svg class="opp-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="25" y="30" width="50" height="50" fill="#1f5aa6" opacity="0.3"/>
+                                </svg>
                                 <h3>提升翻桌率</h3>
                             </div>
                             <div class="opp-item">
                                 <div class="opp-number">3</div>
+                                <svg class="opp-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 30 70 L 40 50 L 50 65 L 60 40 L 70 60" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.6"/>
+                                </svg>
                                 <h3>提高營收</h3>
                             </div>
                             <div class="opp-item">
                                 <div class="opp-number">4</div>
+                                <svg class="opp-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 50 15 L 65 45 L 85 45 L 70 60 L 80 90 L 50 70 L 20 90 L 30 60 L 15 45 L 35 45 Z" fill="#1f5aa6" opacity="0.3"/>
+                                </svg>
                                 <h3>創造品牌特色</h3>
                             </div>
                         </div>
@@ -144,9 +211,34 @@
                         <div class="section-label">Clear Problem Statement</div>
                         <h2>如何讓餐點更快速、更精準、更有趣地送達顧客桌邊？</h2>
                         <div class="statement-visual">
-                            <div class="statement-element">快速</div>
-                            <div class="statement-element">精準</div>
-                            <div class="statement-element">有趣</div>
+                            <div class="statement-element">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.6">
+                                        <path d="M 40 10 L 50 40 L 80 40 L 60 60 L 70 90 L 40 70 L 10 90 L 20 60 L 0 40 L 30 40 Z" fill="#1f5aa6"/>
+                                    </g>
+                                </svg>
+                                <span>快速</span>
+                            </div>
+                            <div class="statement-element">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.6">
+                                        <circle cx="40" cy="40" r="30" fill="none" stroke="#1f5aa6" stroke-width="4"/>
+                                        <circle cx="40" cy="40" r="20" fill="none" stroke="#1f5aa6" stroke-width="2"/>
+                                        <circle cx="40" cy="40" r="5" fill="#1f5aa6"/>
+                                    </g>
+                                </svg>
+                                <span>精準</span>
+                            </div>
+                            <div class="statement-element">
+                                <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.6">
+                                        <path d="M 20 50 Q 40 20 60 50 Q 40 60 20 50" fill="#1f5aa6"/>
+                                        <circle cx="30" cy="45" r="3" fill="#ffffff"/>
+                                        <circle cx="50" cy="45" r="3" fill="#ffffff"/>
+                                    </g>
+                                </svg>
+                                <span>有趣</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -159,22 +251,37 @@
                         <h2>目標客群</h2>
                         <div class="audience-grid">
                             <div class="audience-item">
-                                <div class="audience-icon">👨‍💼</div>
-                                <h3>18-40���</h3>
+                                <svg class="audience-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="30" r="15" fill="#1f5aa6" opacity="0.6"/>
+                                    <path d="M 40 50 Q 35 60 40 75 L 60 75 Q 65 60 60 50 Z" fill="#1f5aa6" opacity="0.6"/>
+                                </svg>
+                                <h3>18-40歲</h3>
                                 <p>上班族與年輕消費者</p>
                             </div>
                             <div class="audience-item">
-                                <div class="audience-icon">👨‍👩‍👧</div>
+                                <svg class="audience-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="35" cy="35" r="12" fill="#1f5aa6" opacity="0.6"/>
+                                    <circle cx="65" cy="35" r="12" fill="#1f5aa6" opacity="0.6"/>
+                                    <circle cx="35" cy="65" r="12" fill="#1f5aa6" opacity="0.6"/>
+                                    <circle cx="65" cy="65" r="12" fill="#1f5aa6" opacity="0.6"/>
+                                </svg>
                                 <h3>家庭客群</h3>
                                 <p>尋求便利與樂趣</p>
                             </div>
                             <div class="audience-item">
-                                <div class="audience-icon">🌍</div>
+                                <svg class="audience-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 50 15 L 60 40 L 85 40 L 65 60 L 75 85 L 50 65 L 25 85 L 35 60 L 15 40 L 40 40 Z" fill="#1f5aa6" opacity="0.6"/>
+                                </svg>
                                 <h3>觀光旅客</h3>
                                 <p>體驗特色餐飲</p>
                             </div>
                             <div class="audience-item">
-                                <div class="audience-icon">🤖</div>
+                                <svg class="audience-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="30" y="30" width="40" height="40" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.6"/>
+                                    <circle cx="40" cy="45" r="3" fill="#1f5aa6" opacity="0.6"/>
+                                    <circle cx="60" cy="45" r="3" fill="#1f5aa6" opacity="0.6"/>
+                                    <path d="M 40 60 L 60 60" stroke="#1f5aa6" stroke-width="2" opacity="0.6"/>
+                                </svg>
                                 <h3>科技愛好者</h3>
                                 <p>追求創新體驗</p>
                             </div>
@@ -190,19 +297,34 @@
                         <h2>使用者痛點</h2>
                         <div class="pain-points">
                             <div class="pain-item">
-                                <div class="pain-icon">⏳</div>
+                                <svg class="pain-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="40" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+                                    <line x1="50" y1="15" x2="50" y2="50" stroke="#ff6b6b" stroke-width="3"/>
+                                    <line x1="50" y1="50" x2="75" y2="50" stroke="#ff6b6b" stroke-width="3"/>
+                                </svg>
                                 <h3>等待過久</h3>
                             </div>
                             <div class="pain-item">
-                                <div class="pain-icon">❌</div>
+                                <svg class="pain-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="20" y1="20" x2="80" y2="80" stroke="#ff6b6b" stroke-width="4"/>
+                                    <line x1="80" y1="20" x2="20" y2="80" stroke="#ff6b6b" stroke-width="4"/>
+                                </svg>
                                 <h3>送錯餐</h3>
                             </div>
                             <div class="pain-item">
-                                <div class="pain-icon">😫</div>
+                                <svg class="pain-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="25" y="30" width="50" height="40" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+                                    <circle cx="50" cy="50" r="5" fill="#ff6b6b"/>
+                                    <path d="M 50 35 L 50 50 L 65 65" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+                                </svg>
                                 <h3>尖峰服務不足</h3>
                             </div>
                             <div class="pain-item">
-                                <div class="pain-icon">😐</div>
+                                <svg class="pain-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+                                    <circle cx="50" cy="50" r="5" fill="#ff6b6b"/>
+                                    <path d="M 50 25 L 50 20 M 50 75 L 50 80 M 25 50 L 20 50 M 75 50 L 80 50" stroke="#ff6b6b" stroke-width="2"/>
+                                </svg>
                                 <h3>缺乏互動</h3>
                             </div>
                         </div>
@@ -218,18 +340,35 @@
                         <div class="verification-methods">
                             <div class="method">
                                 <div class="method-step">01</div>
+                                <svg class="verification-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="20" y="30" width="60" height="45" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                    <circle cx="35" cy="45" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                    <circle cx="50" cy="45" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                    <circle cx="65" cy="45" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                </svg>
                                 <h3>問卷調查</h3>
                             </div>
                             <div class="method">
                                 <div class="method-step">02</div>
+                                <svg class="verification-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                    <circle cx="50" cy="50" r="5" fill="#1f5aa6" opacity="0.5"/>
+                                </svg>
                                 <h3>使用者訪談</h3>
                             </div>
                             <div class="method">
                                 <div class="method-step">03</div>
+                                <svg class="verification-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 30 50 Q 50 30 70 50 Q 50 70 30 50" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                    <circle cx="50" cy="50" r="4" fill="#1f5aa6" opacity="0.5"/>
+                                </svg>
                                 <h3>現場觀察</h3>
                             </div>
                             <div class="method">
                                 <div class="method-step">04</div>
+                                <svg class="verification-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 30 70 L 40 50 L 50 65 L 60 40 L 70 55" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                </svg>
                                 <h3>數據分析</h3>
                             </div>
                         </div>
@@ -237,13 +376,23 @@
                 </div>
             </section>
 
-            <!-- 第10頁: 產品介紹 -->
+            <!-- 第10頁: 產品���紹 -->
             <section class="slide" data-slide="10">
                 <div class="slide-content">
                     <div class="content-inner">
                         <div class="section-label">Product Introduction</div>
                         <h2>打造下一代智慧餐飲體驗</h2>
                         <p class="intro-subtitle">融合高鐵的準時系統與迴轉壽司的創意</p>
+                        <div class="product-visual">
+                            <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- 軌道 -->
+                                <line x1="50" y1="100" x2="250" y2="100" stroke="#1f5aa6" stroke-width="2" opacity="0.3"/>
+                                <!-- 列車 -->
+                                <rect x="120" y="70" width="60" height="40" rx="5" fill="#1f5aa6" opacity="0.4"/>
+                                <circle cx="135" cy="115" r="8" fill="#1f5aa6" opacity="0.4"/>
+                                <circle cx="165" cy="115" r="8" fill="#1f5aa6" opacity="0.4"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -256,6 +405,17 @@
                         <div class="vision-box">
                             <p class="vision-text">讓每份餐點</p>
                             <p class="vision-text highlight">像高鐵一樣準時抵達</p>
+                            <div class="vision-icon">
+                                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                                    <g opacity="0.4">
+                                        <!-- 軌道 -->
+                                        <line x1="20" y1="60" x2="180" y2="60" stroke="#ffffff" stroke-width="2"/>
+                                        <!-- 列車頭 -->
+                                        <path d="M 140 45 L 180 60 L 140 75 Z" fill="#ffffff"/>
+                                        <rect x="80" y="50" width="60" height="20" fill="#ffffff"/>
+                                    </g>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -269,21 +429,35 @@
                         <div class="highlights-grid">
                             <div class="highlight-card">
                                 <div class="highlight-number">01</div>
+                                <svg class="feature-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 20 60 L 50 20 L 80 60 L 70 60 L 70 80 L 30 80 L 30 60 Z" fill="#1f5aa6" opacity="0.3"/>
+                                </svg>
                                 <h3>高速送餐</h3>
                                 <p>自動軌道系統</p>
                             </div>
                             <div class="highlight-card">
                                 <div class="highlight-number">02</div>
+                                <svg class="feature-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="25" y="25" width="50" height="50" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.3"/>
+                                    <circle cx="50" cy="50" r="15" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.3"/>
+                                </svg>
                                 <h3>智慧軌道</h3>
                                 <p>精準定位配送</p>
                             </div>
                             <div class="highlight-card">
                                 <div class="highlight-number">03</div>
+                                <svg class="feature-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="30" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.3"/>
+                                    <path d="M 50 20 L 50 50 L 70 70" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.3"/>
+                                </svg>
                                 <h3>即時追蹤</h3>
                                 <p>掌握餐點動向</p>
                             </div>
                             <div class="highlight-card">
                                 <div class="highlight-number">04</div>
+                                <svg class="feature-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 50 20 L 60 40 L 80 40 L 65 55 L 75 75 L 50 60 L 25 75 L 35 55 L 20 40 L 40 40 Z" fill="#1f5aa6" opacity="0.3"/>
+                                </svg>
                                 <h3>沉浸式體驗</h3>
                                 <p>互動餐飲旅程</p>
                             </div>
@@ -300,11 +474,31 @@
                         <div class="mvp-content">
                             <p>建立迷你高鐵送餐系統</p>
                             <div class="mvp-flow">
-                                <div class="flow-box">廚房</div>
+                                <div class="flow-box">
+                                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M 10 50 L 10 15 Q 10 10 15 10 L 45 10 Q 50 10 50 15 L 50 50 Q 50 55 45 55 L 15 55 Q 10 55 10 50 Z" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                        <circle cx="20" cy="30" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                        <circle cx="30" cy="30" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                        <circle cx="40" cy="30" r="3" fill="#1f5aa6" opacity="0.5"/>
+                                    </svg>
+                                    廚房
+                                </div>
                                 <div class="flow-arrow">→</div>
-                                <div class="flow-box">智慧軌道</div>
+                                <div class="flow-box">
+                                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="10" y1="30" x2="50" y2="30" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                        <circle cx="30" cy="30" r="8" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                    </svg>
+                                    智慧軌道
+                                </div>
                                 <div class="flow-arrow">→</div>
-                                <div class="flow-box">顧客</div>
+                                <div class="flow-box">
+                                    <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="30" cy="30" r="20" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                        <path d="M 20 30 L 30 20 L 40 30" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.5"/>
+                                    </svg>
+                                    顧客
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -317,6 +511,16 @@
                     <div class="content-inner">
                         <h2>智慧列車送餐</h2>
                         <div class="feature-showcase">
+                            <svg class="feature-visual" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                <!-- 軌道 -->
+                                <line x1="50" y1="100" x2="350" y2="100" stroke="#1f5aa6" stroke-width="2" opacity="0.2"/>
+                                <!-- 列車 -->
+                                <g>
+                                    <rect x="150" y="60" width="100" height="60" rx="8" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.4"/>
+                                    <circle cx="175" cy="130" r="10" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.4"/>
+                                    <circle cx="225" cy="130" r="10" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.4"/>
+                                </g>
+                            </svg>
                             <div class="feature-title">解決等待問題</div>
                             <ul class="feature-list">
                                 <li>自動出餐系統</li>
@@ -334,6 +538,19 @@
                     <div class="content-inner">
                         <h2>即時追蹤系統</h2>
                         <div class="feature-showcase">
+                            <svg class="feature-visual" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <circle id="dot" cx="0" cy="0" r="8" fill="#1f5aa6" opacity="0.3"/>
+                                </defs>
+                                <!-- 軌跡 -->
+                                <path d="M 50 100 Q 100 50 150 100 Q 200 150 250 100" fill="none" stroke="#1f5aa6" stroke-width="2" opacity="0.2"/>
+                                <!-- 位置點 -->
+                                <use href="#dot" x="80" y="85"/>
+                                <use href="#dot" x="120" y="65"/>
+                                <use href="#dot" x="160" y="100"/>
+                                <use href="#dot" x="200" y="130"/>
+                                <circle cx="240" cy="105" r="8" fill="#1f5aa6" opacity="0.6"/>
+                            </svg>
                             <div class="feature-title">掌握餐點位置</div>
                             <ul class="feature-list">
                                 <li>實時定位餐點</li>
@@ -351,6 +568,16 @@
                     <div class="content-inner">
                         <h2>智慧推薦系統</h2>
                         <div class="feature-showcase">
+                            <svg class="feature-visual" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                                <!-- 推薦項目 -->
+                                <g opacity="0.4">
+                                    <rect x="30" y="30" width="60" height="60" rx="5" fill="none" stroke="#1f5aa6" stroke-width="2"/>
+                                    <rect x="120" y="30" width="60" height="60" rx="5" fill="none" stroke="#1f5aa6" stroke-width="2"/>
+                                    <rect x="210" y="30" width="60" height="60" rx="5" fill="none" stroke="#1f5aa6" stroke-width="2"/>
+                                    <!-- 連接線 -->
+                                    <path d="M 150 100 L 150 120 L 100 150 M 150 120 L 150 150 M 150 120 L 200 150" stroke="#1f5aa6" stroke-width="1.5" fill="none"/>
+                                </g>
+                            </svg>
                             <div class="feature-title">提高客單價</div>
                             <ul class="feature-list">
                                 <li>個性化推薦</li>
@@ -398,36 +625,47 @@
                 </div>
             </section>
 
-            <!-- 第18頁: 成功指標與結尾 -->
+            <!-- 第18頁: 成功指標��結尾 -->
             <section class="slide" data-slide="18">
                 <div class="slide-content">
                     <div class="content-inner">
                         <h2>Success Metrics</h2>
                         <div class="success-metrics">
                             <div class="metric-item">
-                                <div class="metric-icon">⚡</div>
+                                <svg class="metric-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 20 80 L 30 60 L 40 70 L 60 40 L 80 50" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5"/>
+                                </svg>
                                 <h3>送餐時間</h3>
                                 <p>縮短 <span class="highlight">30%</span></p>
                             </div>
                             <div class="metric-item">
-                                <div class="metric-icon">😊</div>
+                                <svg class="metric-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="35" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5"/>
+                                    <path d="M 50 15 A 35 35 0 1 1 48 15" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.8"/>
+                                </svg>
                                 <h3>客戶滿意度</h3>
                                 <p>超過 <span class="highlight">90%</span></p>
                             </div>
                             <div class="metric-item">
-                                <div class="metric-icon">🔄</div>
+                                <svg class="metric-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 30 70 L 50 50 L 70 70" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+                                    <path d="M 30 50 L 50 30 L 70 50" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+                                </svg>
                                 <h3>回訪率</h3>
                                 <p>提升 <span class="highlight">20%</span></p>
                             </div>
                             <div class="metric-item">
-                                <div class="metric-icon">💰</div>
+                                <svg class="metric-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 80 70 L 50 50 L 30 70" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+                                    <path d="M 80 50 L 50 30 L 30 50" fill="none" stroke="#1f5aa6" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+                                </svg>
                                 <h3>成本</h3>
                                 <p>下降 <span class="highlight">15%</span></p>
                             </div>
                         </div>
                         <div class="closing-section">
                             <h3 class="closing-title">Thank You</h3>
-                            <p class="closing-subtitle">讓送餐不只是送餐<br>而是一場高鐵級的美食旅程</p>
+                            <p class="closing-subtitle">讓��餐不只是送餐<br>而是一場高鐵級的美食旅程</p>
                         </div>
                     </div>
                 </div>
@@ -455,7 +693,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     
-    <!-- 主程�� -->
+    <!-- 主程式 -->
     <script src="script.js"></script>
 </body>
 </html>
